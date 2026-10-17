@@ -221,7 +221,7 @@
   };
 
   resizeCanvas();
-  setMode('content', capabilityItems[0]);
+  setMode('ai', capabilityItems.find((item) => item.dataset.mode === 'ai'));
   restartCycle();
   if (reduceMotion) drawVoice(400); else requestAnimationFrame(drawVoice);
   window.addEventListener('resize', resizeCanvas, { passive: true });
